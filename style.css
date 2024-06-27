@@ -1,0 +1,127 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.logo-nav {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 3, 5);
+    text-transform: uppercase;
+}
+
+main {
+    padding: 100px;
+    background-image: url(./imagens/deco-2_Mobensani.png);
+    background-color: #f2ecea;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* Estilos para o formulário e container */
+.form-container {
+    max-width: 600px;
+    margin: auto; /* Centraliza horizontalmente e verticalmente */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px; /* Espaçamento no topo do formulário */
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px black;
+    position: relative; /* Alterado para posição relativa */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titleform {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #fd051a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #d0030d;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    header {
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo-nav {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form-container {
+        width: 90%;
+        margin-top: 40px; /* Ajusta o espaçamento do formulário */
+        padding: 10px;
+    }
+}

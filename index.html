@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Canal de Denúncia | Mobensani</title>
+</head>
+<body>
+
+<header>
+    <div>
+        <img class="logo-nav" src="./imagens/logo_mobensani.png" alt="logo da mobensani">
+    </div>
+    <nav class="menu-nav">
+        <ul>
+            <a target="_blank" href="http://mobensani.com.br/">Home</a>
+            <a target="_blank" href="http://mobensani.com.br/contato/">Contato</a>
+            <a target="_blank" href="http://mobensani.com.br/privacidade-mobensani/">Política de privacidade</a>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="form-container">
+        <h2 class="titleform">Formulário de Denúncia</h2>
+        <form id="denunciaForm" action="https://formspree.io/f/mqazznnl" method="post">
+            <div class="form-group">
+                <label for="identificar">Deseja se identificar?</label>
+                <select id="identificar" name="identificar" onchange="toggleContactInfo(this)">
+                    <option value="">-- Selecione --</option>
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+
+            <div class="form-group contact-info" id="contactInfo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Seu email">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoria da Denúncia:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">-- Selecione --</option>
+                    <option value="assedio_moral">Assédio moral</option>
+                    <option value="assedio_sexual">Assédio sexual</option>
+                    <option value="desvios_etica_conduta">Desvios éticos e de conduta</option>
+                    <option value="discriminacao">Discriminação</option>
+                    <option value="fraude">Fraude</option>
+                    <option value="furto_roubo">Furto ou Roubo</option>
+                    <option value="importunacao_sexual">Importunação Sexual</option>
+                    <option value="questoes_trabalhistas">Questões Trabalhistas</option>
+                    <option value="utilizacao_indevida">Utilização indevida de imagem ou nome da empresa</option>
+                    <option value="vazamento_informacao">Vazamento de informação</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="denuncia">Denúncia:</label>
+                <textarea id="denuncia" name="denuncia" rows="4" placeholder="Digite sua denúncia"></textarea>
+            </div>
+
+            <input type="submit" value="Enviar Denúncia">
+        </form>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
