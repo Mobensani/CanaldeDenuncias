@@ -11,8 +11,8 @@ header {
     width: 100%;
     height: 120px;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
     margin-bottom: 10px;
 }
 
@@ -21,16 +21,37 @@ header {
     height: 100px;
 }
 
-.menu-nav ul {
+.menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items {
     display: flex;
     list-style: none;
     gap: 50px;
 }
-
-a {
+.menu-items a {
     text-decoration: none;
     color: rgb(0, 3, 5);
     text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.menu-items a:hover {
+    color: #fd051a; /* Cor de hover para os links */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 3, 5);
 }
 
 main {
@@ -43,7 +64,7 @@ main {
 
 /* Estilos para o formulário e container */
 .form-container {
-    max-width: 600px;
+    width: 600px;
     margin: auto; /* Centraliza horizontalmente e verticalmente */
     padding: 20px;
     background-color: #f9f9f9;
@@ -99,6 +120,7 @@ input[type=submit] {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type=submit]:hover {
@@ -109,9 +131,7 @@ input[type=submit]:hover {
 @media screen and (max-width: 600px) {
     header {
         height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px;
+        padding: 25px;
     }
 
     .logo-nav {
@@ -119,9 +139,49 @@ input[type=submit]:hover {
         height: 80px;
     }
 
-    .form-container {
-        width: 90%;
-        margin-top: 40px; /* Ajusta o espaçamento do formulário */
-        padding: 10px;
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        right: 1px;
+        background-color: #333; /* Cor de fundo escura */
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 10; /* Garantir que o menu fique na frente */
+        width: 100%;
+        opacity: 95%;
     }
+
+    .menu-items.show {
+        display: flex;
+    }
+
+    .menu-items a {
+        color: white; /* Cor dos itens do menu em branco */
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Responsividade para o formulário */
+    .form-container {
+        width: 100%; /* Ajusta a largura para 100% da tela em dispositivos móveis */
+        padding: 15px;
+        margin: 10px auto; /* Centraliza o formulário horizontalmente */
+        box-shadow: none; /* Remove a sombra em dispositivos móveis para melhor performance */
+        border-radius: 8px; /* Mantém o border-radius */
+    }
+
+    .titleform {
+        font-size: 24px;
+    }
+
+    input[type=submit] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+ 
 }
