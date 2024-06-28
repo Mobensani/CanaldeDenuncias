@@ -36,7 +36,7 @@
             <form id="denunciaForm" action="https://formspree.io/f/mqazznnl" method="post">
                 <div class="form-group">
                     <label for="identificar">Deseja se identificar?</label>
-                    <select id="identificar" name="identificar" onchange="toggleContactInfo(this)">
+                    <select id="identificar" name="identificar" onchange="toggleContactInfo(this)" required>
                         <option value="">-- Selecione --</option>
                         <option value="nao">Não</option>
                         <option value="sim">Sim</option>
@@ -56,7 +56,7 @@
                 
                 <div class="form-group">
                     <label for="categoria">Selecione a categoria:</label>
-                    <select id="categoria" name="categoria">
+                    <select id="categoria" name="categoria" required>
                         <option value="">-- Selecione --</option>
                         <option value="assedio_moral">Assédio moral</option>
                         <option value="assedio_sexual">Assédio sexual</option>
@@ -74,7 +74,7 @@
                 
                 <div class="form-group">
                     <label for="denuncia">Descreva seu relato:</label>
-                    <textarea id="denuncia" name="denuncia" rows="10" placeholder=""></textarea>
+                    <textarea id="denuncia" name="denuncia" rows="10" placeholder="" required></textarea>
                 </div>
                 
                 <input type="submit" value="Enviar">
