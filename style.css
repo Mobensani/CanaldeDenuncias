@@ -113,18 +113,19 @@ input[type=submit] {
     background-color: #fd051a;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 80px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
+    
 }
 
 input[type=submit]:hover {
-    background-color: #d0030d;
+    background-color: #8f03d0;
 }
 
 /* Responsividade */

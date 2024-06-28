@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<title>Canal de Denúncia | Mobensani</title>
+<title>Ouvidoria Interna | Mobensani</title>
+<link rel="icon" href="./imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
     <section class="form-response">
 
         <div class="form-container">
-            <h2 class="titleform">Formulário de Denúncia</h2>
+            <h2 class="titleform">Ouvidoria Interna </h2>
             <form id="denunciaForm" action="https://formspree.io/f/mqazznnl" method="post">
                 <div class="form-group">
                     <label for="identificar">Deseja se identificar?</label>
@@ -54,7 +55,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="categoria">Categoria da Denúncia:</label>
+                    <label for="categoria">Selecione a categoria:</label>
                     <select id="categoria" name="categoria">
                         <option value="">-- Selecione --</option>
                         <option value="assedio_moral">Assédio moral</option>
@@ -72,11 +73,11 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="denuncia">Denúncia:</label>
-                    <textarea id="denuncia" name="denuncia" rows="4" placeholder="Digite sua denúncia"></textarea>
+                    <label for="denuncia">Descreva seu relato:</label>
+                    <textarea id="denuncia" name="denuncia" rows="10" placeholder=""></textarea>
                 </div>
                 
-                <input type="submit" value="Enviar Denúncia">
+                <input type="submit" value="Enviar">
             </form>
         </div>
     </section>
